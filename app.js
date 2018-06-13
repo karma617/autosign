@@ -1,6 +1,7 @@
 //app.js
 var curl = require('./common/js/curl.js');
 var common = require('./common/js/common.js');
+var variable = require('./common/js/variable.js');
 App({
   onLaunch: function () {
     // 获取用户信息
@@ -25,8 +26,10 @@ App({
     data:'',
     header:'',
     cookies:'',
-    isHttp:false
+    isHttp:false,
+    isRetest:false
   },
   http:curl,
-  common:common
+  common:common,
+  warn: variable
 })

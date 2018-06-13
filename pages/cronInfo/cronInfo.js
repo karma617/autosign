@@ -77,7 +77,9 @@ Page({
                 })
               }
             });
-          } else {
+          } else if (res.statusCode == 300){
+            app.common.toast(res.info, app.warn.warning.toastError);
+          }else {
             app.common.toast("任务修改失败", 2000);
             _this.setData({
               disabled: false,
@@ -122,6 +124,10 @@ Page({
             header: res.data.header,
             cookies: res.data.cookies
           })
+          app.globalData.url = res.data.url;
+          app.globalData.data = res.data.data;
+          app.globalData.header = res.data.header;
+          app.globalData.cookies = res.data.cookies;
         } else {
           app.common.myAlert("任务创建失败");
           _this.setData({
@@ -130,8 +136,21 @@ Page({
           })
         }
       });
-
-
     }
+  },
+  reTest:function(e){
+    wx.showModal({
+      content: "想要重新验证该任务的有效性？",
+      showCancel: true,
+      success: function (res) {
+        app.globalData.isRetest = true;
+        wx.switchTab({
+          url: '../http/http',
+          fail: function () {
+            console.info("跳转失败")
+          }
+        })
+      }
+    });
   }
 })

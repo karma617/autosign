@@ -51,7 +51,9 @@ Page({
               header: "",
               cookies: ""
             })
-          } else {
+          } else if (res.statusCode == 300){
+            app.common.toast(res.info, app.warn.warning.toastError);
+          }else{
             app.common.myAlert("任务创建失败");
             _this.setData({
               disabled: false,

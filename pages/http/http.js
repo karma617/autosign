@@ -54,29 +54,35 @@ Page({
       var data = { param: e.detail.value};
       var header = { 'content-type': 'application/json' };
       app.http.postHttp(app.http.url.httptest, data,header).then(function(res){
-        wx.showModal({
-          content: res+" 是否填写到签到任务表单？",
-          showCancel: true,
-          success: function (res) {
-            if(res.confirm){
-              app.globalData.isHttp = true;
-              app.globalData.url = e.detail.value.url;
-              app.globalData.data = e.detail.value.data;
-              app.globalData.header = e.detail.value.header;
-              app.globalData.cookies = e.detail.value.cookies;
-              wx.switchTab({
-                url: '../task/task',
-                fail: function () {
-                  console.info("跳转失败")
-                }
-              })
-            }
-          }
-        });
         _this.setData({
           disabled: false,
           buttonText: '提交'
         })
+        if (res.length > 0){
+          wx.showModal({
+            content: res + "\r\n\r\n是否填写到签到任务表单？",
+            showCancel: true,
+            success: function (res) {
+              if (res.confirm) {
+                app.globalData.isHttp = true;
+                app.globalData.url = e.detail.value.url;
+                app.globalData.data = e.detail.value.data;
+                app.globalData.header = e.detail.value.header;
+                app.globalData.cookies = e.detail.value.cookies;
+                wx.switchTab({
+                  url: '../task/task',
+                  fail: function () {
+                    console.info("跳转失败")
+                  }
+                })
+              }
+            }
+          });
+        } else if (res.statusCode == 200){
+          app.common.toast(res.info);
+        }else{
+          app.common.toast(res.info, app.warn.warning.toastError);
+        }
       });
     }
     
@@ -85,6 +91,13 @@ Page({
     
   },
   onShow:function(){
-
+    if (app.globalData.isRetest){
+      this.setData({
+        url: app.globalData.url,
+        data: app.globalData.data,
+        header: app.globalData.header,
+        cookies: app.globalData.cookies
+      });
+    }
   }
 })

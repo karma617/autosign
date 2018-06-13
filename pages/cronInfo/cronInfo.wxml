@@ -55,6 +55,7 @@
       </view>
   </view>
   <input class="hidden" name="openid" value="{{openid}}" />
+  <button bindtouchstart='reTest' class="weui-btn" type="default" plain="true">重新测试</button>
   <button class="weui-btn" disabled='{{disabled}}' type="primary" form-type='submit' plain="true">{{buttonText}}</button>
   <view class="weui-footer">
             <view class="weui-footer__links">

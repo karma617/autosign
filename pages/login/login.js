@@ -75,6 +75,10 @@ Page({
           is_hidden: 'hidden'
         })
       })
+    }else{
+      _this.setData({
+        is_hidden: 'hidden'
+      })
     }
   },
   onPullDownRefresh: function (e) {
