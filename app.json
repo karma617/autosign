@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/http/http",
+    "pages/task/task",
+    "pages/login/login",
+    "pages/cronInfo/cronInfo",
+    "pages/web/web",
+    "pages/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "签到助手",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/http/http",
+        "text": "请求测试",
+        "iconPath": "images/ico-http.png",
+        "selectedIconPath": "images/ico-http-d.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "计划任务",
+        "iconPath": "images/ico-work.png",
+        "selectedIconPath": "images/ico-work-d.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "我的信息",
+        "iconPath": "images/ico-user.png",
+        "selectedIconPath": "images/ico-user-d.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "使用说明",
+        "iconPath": "images/ico-help.png",
+        "selectedIconPath": "images/ico-help-d.png"
+      }
+    ]
+  }
+}

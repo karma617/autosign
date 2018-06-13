@@ -1,0 +1,14 @@
+.weui-footer{
+  margin-top:1.5rem;
+  bottom:0;
+  position:fixed;
+  width:100%;
+}
+.userinfo{
+  text-align: center;
+}
+.userinfo-avatar{
+  border-radius:50%;
+  width:80px;
+  height:80px;
+}

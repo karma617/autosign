@@ -1,0 +1,25 @@
+<view class="page">
+	<view class="page__bd">
+		<view class="weui-article">
+			<view class="weui-article__h1">使用说明：</view>
+			<view class="weui-article__section">
+				<view class="weui-article__h3">1.使用此工具前需要本身对http请求过程有一定的了解。</view>
+        <view class="weui-article__h3">2.使用此工具前需要先用抓包工具抓到请求包后再进行请求测试和计划的添加。</view>
+        <view class="weui-article__h3">3.此小程序仅作为助手类工具使用，请勿用来进行非法操作！</view>
+				<view class="weui-article__p">
+          不知道写啥，等想起来再写吧~
+				</view>
+			</view>
+		</view>
+    </view>
+
+
+
+	<view class="weui-footer">
+		<view class="weui-footer__links">
+			<navigator url="../web/web" class="weui-footer__link">Karma617</navigator>
+		</view>
+		<view class="weui-footer__text">Copyright © 2013-2018 qdapi.com</view>
+	</view>
+
+</view>

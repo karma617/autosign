@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="page">
+<form bindsubmit="formSubmit" bindreset="formReset" bindtouchstart='touchstart'>
+  <view class="weui-cells__title">请求地址</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+              <input maxlength='54321' value="{{url}}" class="weui-input" name="url" placeholder="请输入地址" />
+          </view>
+      </view>
+  </view>
+  <view class="weui-cells__title">请求数据</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <textarea value="{{data}}" maxlength='9999999999' class="weui-textarea" name="data" placeholder="请输入数据" style="height: 3.3em" />
+          </view>
+      </view>
+  </view>
+  
+  <view class="weui-cells__title">提交方式</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__bd">
+              <picker name="type" bindchange="bindtypeChange" value="{{typeIndex}}" range="{{types}}">
+                  <view class="weui-select">{{types[typeIndex]}}</view>
+              </picker>
+          </view>
+      </view>
+  </view>
+
+  <view class="weui-cells__title">协议头</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <textarea value="{{header}}" maxlength='9999999999' class="weui-textarea" name="header" placeholder="可留空" style="height: 15em" />
+          </view>
+      </view>
+  </view>
+
+  <view class="weui-cells__title">Cookies</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <textarea value="{{cookies}}" maxlength='9999999999' class="weui-textarea" name="cookies" placeholder="可留空" style="height: 15em" />
+          </view>
+      </view>
+  </view>
+  <button bindtouchstart='resetInfo' class="weui-btn" type="default" plain="true">清空</button>
+  <button class="weui-btn" disabled='{{disabled}}' type="primary" form-type='submit' plain="true">{{buttonText}}</button>
+</form>
+</view>
