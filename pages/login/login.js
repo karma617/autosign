@@ -5,6 +5,7 @@ Page({
     taskList:[],
     userInfo: {},
     is_hidden:'',
+    is_hidden_data:'hidden',
     hasUserInfo: app.globalData.hasUserInfo,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -70,14 +71,23 @@ Page({
       var data = { openid: app.globalData.openId };
       var header = { 'content-type': 'application/json' }
       app.http.postHttp(app.http.url.getList, data, header).then(function (res) {
-        _this.setData({
-          taskList: res.data,
-          is_hidden: 'hidden'
-        })
+        if (res.data.length > 0){
+          _this.setData({
+            taskList: res.data,
+            is_hidden: 'hidden'
+          })
+        }else{
+          _this.setData({
+            is_hidden: 'hidden',
+            is_hidden_data: ''
+          })
+        }
+        
       })
     }else{
       _this.setData({
-        is_hidden: 'hidden'
+        is_hidden: 'hidden',
+        is_hidden_data:''
       })
     }
   },

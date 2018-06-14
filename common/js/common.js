@@ -7,7 +7,7 @@ function myAlert(str=''){
     }
   });
 }
-function toast(str = '', images = '', time = 2000, status = 'success'){
+function toast(str = '', images = '',_this=null, time = 2000, status = 'success'){
   wx.showToast({
     title: str,
     icon: status,

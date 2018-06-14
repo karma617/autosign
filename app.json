@@ -30,7 +30,7 @@
       },
       {
         "pagePath": "pages/login/login",
-        "text": "我的信息",
+        "text": "我的任务",
         "iconPath": "images/ico-user.png",
         "selectedIconPath": "images/ico-user-d.png"
       },
