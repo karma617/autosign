@@ -5,7 +5,8 @@
     "pages/login/login",
     "pages/cronInfo/cronInfo",
     "pages/web/web",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/issues/issues"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,15 +31,9 @@
       },
       {
         "pagePath": "pages/login/login",
-        "text": "我的任务",
+        "text": "我的",
         "iconPath": "images/ico-user.png",
         "selectedIconPath": "images/ico-user-d.png"
-      },
-      {
-        "pagePath": "pages/help/help",
-        "text": "使用说明",
-        "iconPath": "images/ico-help.png",
-        "selectedIconPath": "images/ico-help-d.png"
       }
     ]
   }

@@ -1,0 +1,9 @@
+<view>
+  <form bindsubmit="submitClick" bindreset="formReset">
+    <i-panel title="反馈建议">
+        <i-input bind:change="emailChange" type="text" name="email" value="" title="邮箱" placeholder="请输入您的邮箱地址" maxlength="50"/>
+        <i-input bind:change="contentChange" name="content" value="" type="textarea" title="BUG或建议" placeholder="请输入BUG或建议(最多300字)" maxlength="300" />
+        <i-button bind:click="handleClick" type="success" form-type='submit' loading='{{loading}}' shape="circle" disabled="{{is_disabled}}">{{btnText}}</i-button>
+    </i-panel>
+  </form>
+</view>

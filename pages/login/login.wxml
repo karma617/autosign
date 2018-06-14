@@ -1,5 +1,5 @@
 <view>
-<view class="userinfo">
+  <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
     <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -7,28 +7,21 @@
     </block>
   </view>
 
-<view class="weui-panel">
-	<view class="weui-panel__hd">我的定时任务</view>
-	<view class="weui-panel__bd">
-		<view class="weui-media-box weui-media-box_small-appmsg">
-			<view class="weui-cells weui-cells_in-small-appmsg">
-        <view class="weui-loadmore {{is_hidden}}">
-            <view class="weui-loading"></view>
-            <view class="weui-loadmore__tips">正在加载</view>
-        </view>
-        <view class="weui-loadmore weui-loadmore_line {{is_hidden_data}}">
-            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
-        </view>
-        <block wx:for-items="{{taskList}}" wx:key="userInfoList" >
-          <navigator url="../cronInfo/cronInfo?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-            <view class="weui-cell__bd weui-cell_primary">
-              <view>{{item.title}}</view>
-            </view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-          </navigator>
-        </block>
-			</view>
-		</view>
-	</view>
-</view>
+
+  <i-panel class="cell-panel-demo" title="我的定时任务">
+    <view class="container {{is_hidden}}">
+      <i-spin fix></i-spin>
+    </view>
+    <i-cell-group>
+      <i-cell wx:for-items="{{taskList}}" wx:key="userInfoList" title="{{item.title}}" is-link url="../cronInfo/cronInfo?id={{item.id}}"></i-cell>
+    </i-cell-group>
+  </i-panel>
+
+  <i-panel class="cell-panel-demo" title="帮助">
+    <i-cell-group>
+      <i-cell title="使用说明" is-link url="../help/help"></i-cell>
+      <i-cell title="反馈建议" is-link url="../issues/issues"></i-cell>
+    </i-cell-group>
+  </i-panel>
+
 </view>

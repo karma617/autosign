@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-input": "/style/dist/input/index",
+    "i-panel": "/style/dist/panel/index",
+    "i-icon": "/style/dist/icon/index",
+    "i-button": "/style/dist/button/index"
+  }
+}
