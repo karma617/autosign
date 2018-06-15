@@ -58,5 +58,6 @@ module.exports={
     getList: host + '/user/getlist/getList',//获取用户任务列表
     eidtCronTask: host + '/cronjob/task/eidtCronTask', //修改定时任务
     getCronTask: host + '/cronjob/task/getCronTask', //获取定时任务
+    feedback: host + '/user/feedback/feedback',//
   }
 }

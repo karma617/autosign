@@ -20,8 +20,6 @@
   <i-panel class="cell-panel-demo" title="帮助">
     <i-cell-group>
       <i-cell title="使用说明" is-link url="../help/help"></i-cell>
-      <i-cell title="反馈建议" is-link url="../issues/issues"></i-cell>
     </i-cell-group>
   </i-panel>
-
 </view>

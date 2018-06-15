@@ -4,6 +4,7 @@
     "i-cell-group": "/style/dist/cell-group/index",
     "i-cell": "/style/dist/cell/index",
     "i-panel": "/style/dist/panel/index",
-    "i-spin": "/style/dist/spin/index"
+    "i-spin": "/style/dist/spin/index",
+    "i-button": "/style/dist/button/index"
   }
 }

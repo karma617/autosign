@@ -12,9 +12,9 @@
 			</view>
 		</view>
     </view>
-
-
-
+    <i-panel title="">
+      <i-button open-type="feedback" type="ghost">反馈建议</i-button>
+    </i-panel>
 	<view class="weui-footer">
 		<view class="weui-footer__links">
 			<navigator url="../web/web" class="weui-footer__link">Karma617</navigator>

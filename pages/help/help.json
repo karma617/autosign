@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "使用说明"
+  "navigationBarTitleText": "使用说明",
+  "usingComponents": {
+    "i-cell-group": "/style/dist/cell-group/index",
+    "i-button": "/style/dist/button/index"
+  }
 }
